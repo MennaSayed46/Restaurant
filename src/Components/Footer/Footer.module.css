@@ -1,0 +1,23 @@
+.footer {
+    background-image: url('../../../public/footer_bg_1.jpg');
+    background-size: cover; 
+    background-position: center; 
+    height: auto; 
+  }
+  .title{
+    font-family: "ZCOOL XiaoWei", sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 22px;
+  
+  }
+  .address{
+    font-family: "ZCOOL XiaoWei", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  
+  }
+  .links:hover {
+    cursor: url('../../../public/cursor.png'), pointer;
+  }

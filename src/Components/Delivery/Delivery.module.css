@@ -1,0 +1,23 @@
+.food_delivery{
+    font-family: "ZCOOL XiaoWei", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 20px;
+}
+.good_food{
+    font-family: "ZCOOL XiaoWei", sans-serif;
+    font-weight: 400;
+      font-size: 45px;
+      line-height: 1;
+}
+.details{
+    font-family: "ZCOOL XiaoWei", sans-serif;
+    line-height: 1.625;
+    color: #5C6574;
+}
+.btn{
+    font-family: "ZCOOL XiaoWei", sans-serif;
+    font-weight: 400;
+      font-size: 20px;
+     
+}

@@ -1,0 +1,95 @@
+.food
+{
+ font-family: "ZCOOL XiaoWei", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.47rem;
+}
+.burger{
+  background-image: url('../../../public/cta_bg_21.jpg');
+    background-size: cover; 
+    background-position: center; 
+    height: auto; 
+}
+.pizza{
+  background-image: url('../../../public/cta_bg_22.jpg');
+    background-size: cover; 
+    background-position: center; 
+    height: auto; 
+};
+
+
+
+.anotherBtn{
+  transform: translateX(-100%);
+  transition: all 0.8S ease;
+  opacity: 0;
+  width: fit-content !important;
+}
+
+.footer:hover .anotherBtn{
+  transform: translateX(0);
+  opacity: 100%;
+  width: fit-content;
+
+}
+.about{
+  font-family: "ZCOOL XiaoWei", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 20px;
+}
+.fineArt{
+  font-family: "ZCOOL XiaoWei", sans-serif;
+  font-weight: 400;
+    font-size: 45px;
+    line-height: 1;
+    /* color: #2a2a2a; */
+}
+.details{
+  font-family: "ZCOOL XiaoWei", sans-serif;
+  line-height: 1.625;
+  color: #5C6574;
+}
+.aboutTitle{
+  font-family: "ZCOOL XiaoWei", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 20px;
+}
+.detailsOfAbout{
+  font-family: "ZCOOL XiaoWei", sans-serif;
+  line-height:20px;
+  font-size: 18px;
+  color: #5C6574;
+}
+.discountParent{
+  background-image: url('../../../public/feature_bg_1.jpg');
+  background-size: cover; 
+  background-position: center; 
+  height: auto; 
+}
+.discount{
+  font-family: "ZCOOL XiaoWei", sans-serif;
+  font-weight: 400;
+    font-size: 30px;
+    line-height: 1;
+}
+.detailsOfDiscount{
+  font-family: "ZCOOL XiaoWei", sans-serif;
+  line-height:20px;
+  font-size: 18px;
+  color: #5C6574;
+}
+.disc{
+  font-family: "ZCOOL XiaoWei", sans-serif;
+  font-weight: 400;
+    font-size: 30px;
+    line-height: 1;
+}
+.grill{
+  font-family: "ZCOOL XiaoWei", sans-serif;
+  font-weight: 400;
+    font-size: 55px;
+    line-height: 1;
+}
