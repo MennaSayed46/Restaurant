@@ -4,6 +4,7 @@ import logo from '../../../public/logo-footer.svg'
 import cursor from '../../../public/cursor.png'
 
 export default function Footer () {
+  
   return (
     <>
       <footer
