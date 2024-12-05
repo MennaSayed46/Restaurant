@@ -18,7 +18,8 @@ import ProtectRoute from './Components/ProtectRoute/ProtectRoute'
 function App() {
   let router= createBrowserRouter([
     {path:'/' , element:<Layout/>,children:[
-      {path:'home',element:<ProtectRoute><Home/></ProtectRoute>},
+     
+      {path:'/home',element:<Home/>},
       {path:'/pages/home',element:<ProtectRoute><Home/></ProtectRoute>},
       {path:'/menus/home',element:<ProtectRoute><Home/></ProtectRoute>},
       {path:'/contact/home',element:<ProtectRoute><Home/></ProtectRoute>},
