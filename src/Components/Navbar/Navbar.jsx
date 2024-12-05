@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import style from './Navbar.module.css';
 import logo from '../../../public/logo-white.svg';
 import { Link } from 'react-router-dom';
-// import { to } from './../../../node_modules/rollup/dist/es/shared/node-entry';
+
 
 export default function Navbar() {
   
@@ -103,18 +103,8 @@ export default function Navbar() {
 
 
           <div className="flex justify-center items-center bg-[#111111] w-3/12">
-            <div className="lg:flex items-center hidden">
-              <p className='border-white hover:border-[#c59d5f] hover:bg-[#c59d5f] p-2 border rounded-[50%] hover:transition-all hover:duration-500'>
-                <i className="text-white fa-cart-shopping fa-solid"></i>
-              </p>
-              <span className="border-[#858a91] mx-2 border-r h-8"></span>
-            </div>
-            <div className="lg:flex flex-col justify-center items-center hidden">
-              <p className='text-white hover:text-[#c59d5f] hover:transition-all hover:duration-500'><i class="mx-1 text-white text-xl fa-phone-volume fa-solid"></i>+20 01119121377</p>
-              <p className='text-[#858a91]'>Contact us for reversation</p>
-
-            </div>
-            <button onClick={toggleMenu} className="flex lg:hidden mx-3 text-white">
+            <li className='md:block hidden text-white'>Logout</li>
+            <button onClick={toggleMenu} className="flex lg:hidden bg-transparent mx-3 text-white">
               <i className={`fa-solid ${isMenuOpen ? 'fa-xmark' : 'fa-bars'}`}></i>
             </button>
           </div>
@@ -127,7 +117,7 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="top-0 right-0 z-40 fixed bg-[#111111] w-1/2 h-full">
       
-          <button onClick={toggleMenu} className="top-4 right-4 absolute text-2xl text-white">
+          <button onClick={toggleMenu} className="top-4 right-4 absolute bg-transparent text-2xl text-white">
             <i className="fa-solid fa-xmark"></i>
           </button>
 
@@ -208,6 +198,20 @@ export default function Navbar() {
                   } transition-transform duration-300 ${hoveredItem === 'Contact' ? 'rotate-180' : 'rotate-0'
                   }`}
               ></i></Link>
+            </li>
+
+            <li
+              className="mx-3 my-2 hover:text-[#c59d5f] transition-all duration-300"
+              onMouseEnter={() => setHoveredItem('logout')}
+              onMouseLeave={() => setHoveredItem(null)}
+            >
+              Logout
+              
+              <i
+                className={`fa-solid ${hoveredItem === 'logout' ? 'fa-minus' : 'fa-plus'
+                  } transition-transform duration-300 ${hoveredItem === 'logout' ? 'rotate-180' : 'rotate-0'
+                  }`}
+              ></i>
             </li>
 
             <div className="flex items-center mt-12">

@@ -27,23 +27,19 @@ import Menu from '../Menu/Menu';
 
 
 export default function FoodSlider () {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0)
-  // }, [])
+
 
   const [translateY, setTranslateY] = useState(0)
   const [rotation, setRotation] = useState(0)
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY
-      setRotation(scrollPosition * 0.1)
+      setRotation(scrollPosition * 0.2)
     }
 
     window.addEventListener('scroll', handleScroll)
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
+ 
   }, [])
 
   return (

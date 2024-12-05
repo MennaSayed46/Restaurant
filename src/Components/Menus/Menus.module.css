@@ -1,0 +1,71 @@
+.mainhome {
+  background-image: url('../../../public/breadcumb-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: auto;
+}
+
+.food_menu {
+  font-family: 'ZCOOL XiaoWei', sans-serif;
+  font-weight: 400;
+  font-size: 75px;
+  line-height: 1;
+}
+.prime {
+  font-family: 'ZCOOL XiaoWei', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1;
+}
+.bookTable {
+  font-family: 'ZCOOL XiaoWei', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1;
+}
+
+.reservationTitle {
+  font-family: 'ZCOOL XiaoWei', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.make_a_reservation {
+  font-family: 'ZCOOL XiaoWei', sans-serif;
+  font-weight: 400;
+  font-size: 45px;
+}
+
+.name_of_food {
+  font-family: 'ZCOOL XiaoWei', sans-serif;
+  font-weight: 400;
+  font-size: 35px;
+  color: #2a2a2a;
+}
+
+.registeration {
+    font-family: 'ZCOOL XiaoWei', sans-serif;
+    color: #908e8e;
+}
+
+
+
+span::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: -0.25em;
+    right: -0.25em;
+    background-color:#fa8507;
+    transform-origin: center right;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .food:hover span:before {
+    transform: scaleX(1);
+    transform-origin: center left;
+  }

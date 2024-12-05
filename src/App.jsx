@@ -12,6 +12,7 @@ import Menus from './Components/Menus/Menus'
 import Contact from './Components/Contact/Contact'
 import Shop from './Components/Shop/Shop'
 import Blog from './Components/Blog/Blog'
+import { Toaster } from 'react-hot-toast'
 
 function App() {
   let router= createBrowserRouter([
@@ -34,6 +35,7 @@ function App() {
 
     <>
     <RouterProvider router={router}></RouterProvider>
+    <Toaster />
      
 
 
