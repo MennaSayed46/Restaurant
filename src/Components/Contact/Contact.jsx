@@ -12,7 +12,7 @@ export default function Contact () {
         >
           <p className={`text-white py-6 ${style.contact}`}> Contact</p>
           <p className={`${style.prime} text-white`}>
-            <Link to={'/'}>Home</Link>
+            <Link to={'/home'}>Home</Link>
             <i className='mx-2 fa-greater-than fa-solid'></i> contact
           </p>
         </div>

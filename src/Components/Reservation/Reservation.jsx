@@ -20,7 +20,7 @@ export default function Reservation () {
         >
           <p className={`text-white py-6 ${style.reservation}`}> Reservation</p>
           <p className={`${style.prime} text-white`}>
-            <Link to={'/'}>Home</Link>
+            <Link to={'home'}>Home</Link>
             <i className='mx-2 fa-greater-than fa-solid'></i> contact
           </p>
         </div>

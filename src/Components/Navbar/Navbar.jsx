@@ -1,10 +1,17 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import style from './Navbar.module.css';
 import logo from '../../../public/logo-white.svg';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { UserContext } from '../../UserContext/UserContext';
 
 
 export default function Navbar() {
+  let navigate=useNavigate();
+  function handleLogOut(){
+    
+    setLoadingSpinner(false);
+    navigate('/register');
+  };
   
   const [hoveredItem, setHoveredItem] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false); 
@@ -13,6 +20,8 @@ export default function Navbar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+
+  let {loadingSpinner,setLoadingSpinner}=useContext(UserContext);
   return (
     <>
       <nav className='top-0 z-30 fixed inset-x-0 justify-center md:justify-around border-2 mt-0 p-0 w-screen'>
@@ -23,11 +32,11 @@ export default function Navbar() {
 
           <div className="lg:flex justify-center items-center gap-x-5 hidden bg-[#111111] mx-2 w-10/12 text-white listItems">
             <li
-              className="mx-3 my-2 hover:text-[#c59d5f] transition-all duration-300"
+              className={loadingSpinner?`mx-3 my-2 hover:text-[#c59d5f] transition-all duration-300 block `:'hidden'}
               onMouseEnter={() => setHoveredItem('Home')}
               onMouseLeave={() => setHoveredItem(null)}
             >
-             <Link to={'/'}> Home{' '}
+             <Link to={'/home'}> Home{' '}
               <i
                 className={`fa-solid ${hoveredItem === 'Home' ? 'fa-minus' : 'fa-plus'
                   } transition-transform duration-300 ${hoveredItem === 'Home' ? 'rotate-180' : 'rotate-0'
@@ -36,7 +45,7 @@ export default function Navbar() {
             </li>
 
             <li
-              className="mx-3 hover:text-[#c59d5f] transition-all duration-300"
+               className={loadingSpinner?`mx-3 my-2 hover:text-[#c59d5f] transition-all duration-300 block `:'hidden'}
               onMouseEnter={() => setHoveredItem('Pages')}
               onMouseLeave={() => setHoveredItem(null)}
             >
@@ -49,7 +58,7 @@ export default function Navbar() {
             </li>
 
             <li
-              className="mx-3 hover:text-[#c59d5f] transition-all duration-300"
+               className={loadingSpinner?`mx-3 my-2 hover:text-[#c59d5f] transition-all duration-300 block `:'hidden'}
               onMouseEnter={() => setHoveredItem('Menus')}
               onMouseLeave={() => setHoveredItem(null)}
             >
@@ -61,34 +70,10 @@ export default function Navbar() {
               ></i></Link>
             </li>
 
-            <li
-              className="mx-3 hover:text-[#c59d5f] transition-all duration-300"
-              onMouseEnter={() => setHoveredItem('Shop')}
-              onMouseLeave={() => setHoveredItem(null)}
-            >
-             <Link to={'/shop'}>  Shop{' '}
-              <i
-                className={`fa-solid ${hoveredItem === 'Shop' ? 'fa-minus' : 'fa-plus'
-                  } transition-transform duration-300 ${hoveredItem === 'Shop' ? 'rotate-180' : 'rotate-0'
-                  }`}
-              ></i></Link>
-            </li>
+           
 
             <li
-              className="mx-3 hover:text-[#c59d5f] transition-all duration-300"
-              onMouseEnter={() => setHoveredItem('Blog')}
-              onMouseLeave={() => setHoveredItem(null)}
-            >
-            <Link to={'/blog'}>  Blog{' '}
-              <i
-                className={`fa-solid ${hoveredItem === 'Blog' ? 'fa-minus' : 'fa-plus'
-                  } transition-transform duration-300 ${hoveredItem === 'Blog' ? 'rotate-180' : 'rotate-0'
-                  }`}
-              ></i></Link>
-            </li>
-
-            <li
-              className="mx-3 hover:text-[#c59d5f] transition-all duration-300"
+               className={loadingSpinner?`mx-3 my-2 hover:text-[#c59d5f] transition-all duration-300 block `:'hidden'}
               onMouseEnter={() => setHoveredItem('Contact')}
               onMouseLeave={() => setHoveredItem(null)}
             >
@@ -103,7 +88,8 @@ export default function Navbar() {
 
 
           <div className="flex justify-center items-center bg-[#111111] w-3/12">
-            <li className='md:block hidden text-white'>Logout</li>
+          {loadingSpinner?<><li className='md:block hidden text-white' onClick={handleLogOut}>Logout</li></>:<><Link to={`/register`}><li className='md:block hidden text-white'>Register</li></Link></>}
+            {/* <li className='md:block hidden text-white'>{loadingSpinner?'Logout':'Register'}</li> */}
             <button onClick={toggleMenu} className="flex lg:hidden bg-transparent mx-3 text-white">
               <i className={`fa-solid ${isMenuOpen ? 'fa-xmark' : 'fa-bars'}`}></i>
             </button>
@@ -123,11 +109,11 @@ export default function Navbar() {
 
           <ul className="flex flex-col items-center mt-14 text-white">
           <li
-              className="mx-3 my-2 hover:text-[#c59d5f] transition-all duration-300"
+              className={loadingSpinner?`mx-3 my-2 hover:text-[#c59d5f] transition-all duration-300 block `:'hidden'}
               onMouseEnter={() => setHoveredItem('Home')}
               onMouseLeave={() => setHoveredItem(null)}
             >
-             <Link to={'/'}> Home{' '}
+             <Link to={'home'}> Home{' '}
               <i
                 className={`fa-solid ${hoveredItem === 'Home' ? 'fa-minus' : 'fa-plus'
                   } transition-transform duration-300 ${hoveredItem === 'Home' ? 'rotate-180' : 'rotate-0'
@@ -136,7 +122,7 @@ export default function Navbar() {
             </li>
 
             <li
-              className="mx-3 my-2 hover:text-[#c59d5f] transition-all duration-300"
+              className={loadingSpinner?`mx-3 my-2 hover:text-[#c59d5f] transition-all duration-300 block `:'hidden'}
               onMouseEnter={() => setHoveredItem('Pages')}
               onMouseLeave={() => setHoveredItem(null)}
             >
@@ -149,7 +135,7 @@ export default function Navbar() {
             </li>
 
             <li
-              className="mx-3 my-2 hover:text-[#c59d5f] transition-all duration-300"
+              className={loadingSpinner?`mx-3 my-2 hover:text-[#c59d5f] transition-all duration-300 block `:'hidden'}
               onMouseEnter={() => setHoveredItem('Menus')}
               onMouseLeave={() => setHoveredItem(null)}
             >
@@ -161,34 +147,10 @@ export default function Navbar() {
               ></i></Link>
             </li>
 
-            <li
-              className="mx-3 my-2 hover:text-[#c59d5f] transition-all duration-300"
-              onMouseEnter={() => setHoveredItem('Shop')}
-              onMouseLeave={() => setHoveredItem(null)}
-            >
-             <Link to={'/shop'}>  Shop{' '}
-              <i
-                className={`fa-solid ${hoveredItem === 'Shop' ? 'fa-minus' : 'fa-plus'
-                  } transition-transform duration-300 ${hoveredItem === 'Shop' ? 'rotate-180' : 'rotate-0'
-                  }`}
-              ></i></Link>
-            </li>
+     
 
             <li
-              className="mx-3 my-2 hover:text-[#c59d5f] transition-all duration-300"
-              onMouseEnter={() => setHoveredItem('Blog')}
-              onMouseLeave={() => setHoveredItem(null)}
-            >
-            <Link to={'/blog'}>  Blog{' '}
-              <i
-                className={`fa-solid ${hoveredItem === 'Blog' ? 'fa-minus' : 'fa-plus'
-                  } transition-transform duration-300 ${hoveredItem === 'Blog' ? 'rotate-180' : 'rotate-0'
-                  }`}
-              ></i></Link>
-            </li>
-
-            <li
-              className="mx-3 my-2 hover:text-[#c59d5f] transition-all duration-300"
+              className={loadingSpinner?`mx-3 my-2 hover:text-[#c59d5f] transition-all duration-300 block `:'hidden'}
               onMouseEnter={() => setHoveredItem('Contact')}
               onMouseLeave={() => setHoveredItem(null)}
             >
@@ -201,9 +163,10 @@ export default function Navbar() {
             </li>
 
             <li
-              className="mx-3 my-2 hover:text-[#c59d5f] transition-all duration-300"
+             
               onMouseEnter={() => setHoveredItem('logout')}
               onMouseLeave={() => setHoveredItem(null)}
+              onClick={handleLogOut}
             >
               Logout
               
