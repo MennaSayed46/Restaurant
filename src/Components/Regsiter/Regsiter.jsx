@@ -21,7 +21,7 @@ export default function Regsiter () {
     };
   
     let validationSchema = yup.object().shape({
-      name: yup.string().min(3, 'min length is 3').max(10, 'max length is 10').required('the name is required'),
+      name: yup.string().min(3, 'min length is 3').max(100, 'max length is 100').required('the name is required'),
       email: yup.string().email('email is invalid').required('email is required'),
       password: yup.string().matches(/^.{5,}$/, 'password is invalid').required('password is required'),
       rePassword: yup.string().oneOf([yup.ref('password')], 'Passwords must match').required('repassword is required'),
