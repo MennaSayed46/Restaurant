@@ -23,12 +23,10 @@ import aboutFeatureCard2 from '../../../public/feature_card_2.svg'
 import aboutFeatureCard3 from '../../../public/feature_card_3.svg'
 import kababImg from '../../../public/cta_1.png'
 import Delivery from '../Delivery/Delivery'
-import Menu from '../Menu/Menu';
-
+import Menu from '../Menu/Menu'
+import { Link } from 'react-router-dom'
 
 export default function FoodSlider () {
-
-
   const [translateY, setTranslateY] = useState(0)
   const [rotation, setRotation] = useState(0)
   useEffect(() => {
@@ -38,8 +36,6 @@ export default function FoodSlider () {
     }
 
     window.addEventListener('scroll', handleScroll)
-
- 
   }, [])
 
   return (
@@ -140,21 +136,24 @@ export default function FoodSlider () {
               <p className={`limite-offer text-[#c59d5f] py-3  `}>
                 Limited Offer
               </p>
-              <div
-                className={`relative ${style.footer} overflow-hidden rounded-md w-fit footer  `}
-              >
-                <button
-                  className={`bg-[#c79f62] text-white px-10 py-3 rounded-md text-center ${style.btn} btn`}
+              <Link to={`/menus`}>
+                {' '}
+                <div
+                  className={`relative ${style.footer} overflow-hidden rounded-md w-fit footer  `}
                 >
-                  Order Now <i className='fa-angles-right fa-solid'></i>{' '}
-                </button>
+                  <button
+                    className={`bg-[#c79f62] text-white px-10 py-3 rounded-md text-center ${style.btn} btn`}
+                  >
+                    Order Now <i className='fa-angles-right fa-solid'></i>{' '}
+                  </button>
 
-                <button
-                  className={`bg-[#2a2a2a] absolute inset-x-0 top-0 px-10 py-3  bottom-0 text-center rounded-md text-white  ${style.anotherBtn} anotherBtn`}
-                >
-                  Order Now <i className='fa-angles-right fa-solid'></i>
-                </button>
-              </div>
+                  <button
+                    className={`bg-[#2a2a2a] absolute inset-x-0 top-0 px-10 py-3  bottom-0 text-center rounded-md text-white  ${style.anotherBtn} anotherBtn`}
+                  >
+                    Order Now <i className='fa-angles-right fa-solid'></i>
+                  </button>
+                </div>
+              </Link>
             </div>
 
             <div className='top-5 right-5 absolute flex-col animate offer-burger'>
@@ -171,21 +170,24 @@ export default function FoodSlider () {
               <p className={`limite-offer text-[#c59d5f] py-3  `}>
                 Limited Offer
               </p>
-              <div
-                className={`relative ${style.footer} overflow-hidden rounded-md w-fit footer  `}
-              >
-                <button
-                  className={`bg-[#c79f62] text-white px-10 py-3 rounded-md text-center ${style.btn} btn`}
+              <Link to={`/menus`}>
+                {' '}
+                <div
+                  className={`relative ${style.footer} overflow-hidden rounded-md w-fit footer  `}
                 >
-                  Order Now <i className='fa-angles-right fa-solid'></i>{' '}
-                </button>
+                  <button
+                    className={`bg-[#c79f62] text-white px-10 py-3 rounded-md text-center ${style.btn} btn`}
+                  >
+                    Order Now <i className='fa-angles-right fa-solid'></i>{' '}
+                  </button>
 
-                <button
-                  className={`bg-[#2a2a2a] absolute inset-x-0 top-0 px-10 py-3  bottom-0 text-center rounded-md text-white  ${style.anotherBtn} anotherBtn`}
-                >
-                  Order Now <i className='fa-angles-right fa-solid'></i>
-                </button>
-              </div>
+                  <button
+                    className={`bg-[#2a2a2a] absolute inset-x-0 top-0 px-10 py-3  bottom-0 text-center rounded-md text-white  ${style.anotherBtn} anotherBtn`}
+                  >
+                    Order Now <i className='fa-angles-right fa-solid'></i>
+                  </button>
+                </div>
+              </Link>
             </div>
 
             <div className='top-5 right-5 absolute flex-col animate jus offer-burger'>
@@ -196,7 +198,7 @@ export default function FoodSlider () {
         </section>
       </main>
 
-      {/* about out food */}
+      {/* about our food */}
       <section className='bg-white my-6 py-12 w-full overflow-hidden'>
         <div className='flex md:flex-row flex-col gap-6 mx-auto w-4/5 parent'>
           <div className='left w-full'>
@@ -234,7 +236,7 @@ export default function FoodSlider () {
                 <img
                   src={aboutFeature}
                   alt='about-feature-burger-img '
-                  className='hover:scale-110 transition-all duration-200'
+                  className='transition-all duration-200 hover:scale-110'
                 />
                 <div>
                   <p className={`${style.aboutTitle} text-[#2a2a2a] py-2`}>
@@ -250,7 +252,7 @@ export default function FoodSlider () {
                 <img
                   src={aboutFeature2}
                   alt='about-feature-burger-img'
-                  className='hover:scale-110 transition-all duration-200'
+                  className='transition-all duration-200 hover:scale-110'
                 />
                 <div>
                   <p className={`${style.aboutTitle} text-[#2a2a2a] py-2`}>
@@ -262,9 +264,11 @@ export default function FoodSlider () {
                 </div>
               </div>
             </div>
-            <button className='border-[#2a2a2a] border-2 px-4 py-2 rounded'>
-              Book A Table
-            </button>
+            <Link to={`/pages`}>
+              <button className='border-[#2a2a2a] border-2 px-4 py-2 rounded'>
+                Book A Table
+              </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -338,22 +342,29 @@ export default function FoodSlider () {
               Grill Chicken Stick
             </p>
             <p className={`${style.disc} text-white py-2`}>Limited Offer</p>
-            <div
-              className={`relative ${style.footer} overflow-hidden rounded-md w-fit footer my-6  `}
-            >
-              <button
-                className={`bg-[#c79f62] text-white px-10 py-3 rounded-md text-center ${style.btn} btn`}
+            <Link to={`/menus`}>
+              {' '}
+              <div
+                className={`relative ${style.footer} overflow-hidden rounded-md w-fit footer my-6  `}
               >
-                Order Now <i className='fa-angles-right fa-solid'></i>{' '}
-              </button>
+                <button
+                  className={`bg-[#c79f62] text-white px-10 py-3 rounded-md text-center ${style.btn} btn`}
+                >
+                  Order Now <i className='fa-angles-right fa-solid'></i>{' '}
+                </button>
 
-              <button
-                className={`bg-[#2a2a2a] absolute inset-x-0 top-0 px-10 py-3  bottom-0 text-center rounded-md text-white  ${style.anotherBtn} anotherBtn`}
-              >
-                Order Now <i className='fa-angles-right fa-solid'></i>
-              </button>
-            </div>
-            <img src={shape} alt="shapeImg" className='w-1/2 animate object-cover' />
+                <button
+                  className={`bg-[#2a2a2a] absolute inset-x-0 top-0 px-10 py-3  bottom-0 text-center rounded-md text-white  ${style.anotherBtn} anotherBtn`}
+                >
+                  Order Now <i className='fa-angles-right fa-solid'></i>
+                </button>
+              </div>
+            </Link>
+            <img
+              src={shape}
+              alt='shapeImg'
+              className='w-1/2 animate object-cover'
+            />
           </div>
 
           <div className='relative right'>
@@ -366,9 +377,8 @@ export default function FoodSlider () {
         </div>
       </section>
 
-
-      <Delivery/>
-      <Menu/>
+      <Delivery />
+      <Menu />
     </>
   )
 }

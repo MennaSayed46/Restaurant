@@ -9,6 +9,7 @@ import mainImg2 from '../../../public/hero_3_2.png'
 import mainImg3 from '../../../public/hero_3_1.png'
 import offer from '../../../public/hero_offer_1.svg'
 import shape from '../../../public/hero_shape_3_3.png'
+import { Link } from 'react-router-dom'
 
 export default function MainSlider () {
   const [mainImg, setMainImg] = useState(mainImg1)
@@ -48,20 +49,23 @@ export default function MainSlider () {
             <div className='top-1/2 left-1/2 absolute -translate-x-1/2 -translate-y-1/2 titles'>
               <p className={`${style.mainTitle} `}>Perfection</p>
               <p className={`${style.mainTitle} `}>Food Menu</p>
-              <div
-                className={`relative ${style.footer} overflow-hidden  rounded-md `}
-              >
-                <button
-                  className={`bg-[#c79f62] text-white px-10 py-3 rounded-md text-center ${style.btn} w-fit`}
+              <Link to={`/menus`}>
+                {' '}
+                <div
+                  className={`relative ${style.footer} overflow-hidden  rounded-md `}
                 >
-                  Order Now <i className='fa-angles-right fa-solid'></i>{' '}
-                </button>
-                <button
-                  className={`bg-[#2a2a2a] absolute inset-x-0 top-0 px-10 py-3  bottom-0 text-center rounded-md text-white  ${style.anotherBtn}`}
-                >
-                  Order Now <i className='fa-angles-right fa-solid'></i>
-                </button>
-              </div>
+                  <button
+                    className={`bg-[#c79f62] text-white px-10 py-3 rounded-md text-center ${style.btn} w-fit`}
+                  >
+                    Order Now <i className='fa-angles-right fa-solid'></i>{' '}
+                  </button>
+                  <button
+                    className={`bg-[#2a2a2a] absolute inset-x-0 top-0 px-10 py-3  bottom-0 text-center rounded-md text-white  ${style.anotherBtn}`}
+                  >
+                    Order Now <i className='fa-angles-right fa-solid'></i>
+                  </button>
+                </div>
+              </Link>
             </div>
           </div>
 

@@ -1,80 +1,75 @@
-.mainhome{
-    background-image: url('../../../public/breadcumb-bg.jpg');
-    background-size: cover; 
-    background-position: center; 
-    height: auto; 
-  
+.mainhome {
+  background-image: url('../../../public/breadcumb-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: auto;
 }
 
-.reservation{
-    font-family: "ZCOOL XiaoWei", sans-serif;
+.reservation {
+  font-family: 'ZCOOL XiaoWei', sans-serif;
   font-weight: 400;
-    font-size: 75px;
-    line-height: 1;
+  font-size: 75px;
+  line-height: 1;
 }
-.prime{
-    font-family: "ZCOOL XiaoWei", sans-serif;
-    font-weight: 400;
-      font-size: 25px;
-      line-height: 1;
-   
-}
-.bookTable{
-    font-family: "ZCOOL XiaoWei", sans-serif;
-    font-weight: 400;
-      font-size: 25px;
-      line-height: 1;
-}
-
-.reservationTitle{
-    font-family: "ZCOOL XiaoWei", sans-serif;
-    font-weight: 400;
-      font-size: 20px;
-      line-height: 1;
-}
-
-
-.make_a_reservation{
-    font-family: "ZCOOL XiaoWei", sans-serif;
+.prime {
+  font-family: 'ZCOOL XiaoWei', sans-serif;
   font-weight: 400;
-    font-size: 45px;
-    
+  font-size: 25px;
+  line-height: 1;
+}
+.bookTable {
+  font-family: 'ZCOOL XiaoWei', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1;
 }
 
-.reservationForm{
-    background-image: url('../../../public/reservation_bg_2.jpg');
-    background-size: cover; 
-    background-position: center; 
-    height: auto; 
+.reservationTitle {
+  font-family: 'ZCOOL XiaoWei', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.make_a_reservation {
+  font-family: 'ZCOOL XiaoWei', sans-serif;
+  font-weight: 400;
+  font-size: 45px;
+}
+
+.reservationForm {
+  background-image: url('../../../public/reservation_bg_2.jpg');
+  background-size: cover;
+  background-position: center;
+  height: auto;
 }
 
 button {
-    z-index: 1;
-    position: relative;
-    font-size: inherit;
-    font-family: inherit;
-    color: white;
-    padding: 0.5em 1em;
-    outline: none;
-    border: none;
-    background-color: hsl(236, 32%, 26%);
-    overflow: hidden;
-    cursor: pointer;
-  }
-  
-  .btn::after {
-    content: '';
-    z-index: -1;
-    background-color: hsla(0, 0%, 100%, 0.2);
-    position: absolute;
-    top: -50%;
-    bottom: -50%;
-    width: 1.25em;
-    transform: translate3d(-525%, 0, 0) rotate(35deg);
-  }
-  
-  .btn:hover::after {
-    transition: transform 0.45s ease-in-out;
-    transform: translate3d(200%, 0, 0) rotate(35deg);
-  }
-  
+  z-index: 1;
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  padding: 0.5em 1em;
+  outline: none;
+  border: none;
+  background-color: hsl(236, 32%, 26%);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn::after {
+  content: '';
+  z-index: -1;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  position: absolute;
+  top: -50%;
+  bottom: -50%;
+  width: 1.25em;
+  transform: translate3d(-525%, 0, 0) rotate(35deg);
+}
+
+.btn:hover::after {
+  transition: transform 0.45s ease-in-out;
+  transform: translate3d(200%, 0, 0) rotate(35deg);
+}

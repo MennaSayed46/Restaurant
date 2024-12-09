@@ -13,6 +13,7 @@ import Contact from './Components/Contact/Contact'
 import { Toaster } from 'react-hot-toast'
 import Regsiter from './Components/Regsiter/Regsiter'
 import UserContextProvider from './UserContext/UserContext'
+import Login from './Components/Login/Login'
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
       {path:'home' , element:<Home/>},
       {path:'menus' , element:<Menus/>},
       {path:'contact' , element:<Contact/>},
+      {path:'login' , element:<Login/>},
       // {path:'register' , element:<Regsiter/>},
 
     ]}

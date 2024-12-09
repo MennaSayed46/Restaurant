@@ -7,18 +7,6 @@ import Footer from '../Footer/Footer';
 export default function Layout() {
   return (
     <>
-
-{/* <Navbar/> */}
-{/* <navbar></navbar>
-
-
-
-
-
-
-
-*/}
-
    <Navbar/>
    <div className='mt-20 w-full'>
     <Outlet></Outlet>

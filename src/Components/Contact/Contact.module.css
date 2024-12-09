@@ -1,40 +1,48 @@
-.mainhome{
-    background-image: url('../../../public/breadcumb-bg.jpg');
-    background-size: cover; 
-    background-position: center; 
-    height: auto; 
-  
+.mainhome {
+  background-image: url('../../../public/breadcumb-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: auto;
 }
-.contact{
-    font-family: "ZCOOL XiaoWei", sans-serif;
+.contact {
+  font-family: 'ZCOOL XiaoWei', sans-serif;
   font-weight: 400;
-    font-size: 75px;
-    line-height: 1;
+  font-size: 75px;
+  line-height: 1;
 }
-.prime{
-    font-family: "ZCOOL XiaoWei", sans-serif;
-    font-weight: 400;
-      font-size: 25px;
-      line-height: 1;
-   
+.prime {
+  font-family: 'ZCOOL XiaoWei', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1;
 }
-.contact_inf{
-    font-family: "ZCOOL XiaoWei", sans-serif;
-    font-weight: 400;
-      font-size: 45px;
-      line-height: 1;
-   
+.contact_inf {
+  font-family: 'ZCOOL XiaoWei', sans-serif;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 1;
 }
-.para{
-    font-family: "ZCOOL XiaoWei", sans-serif;
-    font-weight: 400;
-      font-size: 25px;
-      line-height: 1;
-   
+.para {
+  font-family: 'ZCOOL XiaoWei', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1;
 }
-.get{
-    font-family: "ZCOOL XiaoWei", sans-serif;
-    font-weight: 400;
-      font-size: 45px;
-      line-height: 1;
+.get {
+  font-family: 'ZCOOL XiaoWei', sans-serif;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 1;
+}
+
+.visit_our_store {
+  font-family: 'ZCOOL XiaoWei', sans-serif;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 1;
+  color: #2a2a2a;
+}
+.see_our_store{
+  font-family: 'ZCOOL XiaoWei', sans-serif;
+  font-size: 20px;
 }

@@ -1,11 +1,13 @@
-.have_an_account{
+.dont_have_an_account{
     font-family: "ZCOOL XiaoWei", sans-serif;
     font-weight: 500;
     font-size: 20px;
 }
 
-.register{
+.log{
     font-family: "ZCOOL XiaoWei", sans-serif;
     font-weight: 700;
     font-size: 30px;
 }
+
+

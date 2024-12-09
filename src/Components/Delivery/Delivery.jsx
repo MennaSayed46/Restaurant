@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import style from './Delivery.module.css';
 import delivery_img from '../../../public/delivery_1.png';
+import { Link } from 'react-router-dom';
 
 export default function Delivery() {
   const sectionRef = useRef(null); 
@@ -83,7 +84,7 @@ export default function Delivery() {
               </div>
             </div>
 
-            <button className="my-4 deliver_btn">Order Now</button>
+           <Link to={`/menus`}> <button className="my-4 deliver_btn">Order Now</button></Link>
           </div>
 
           <div className="right">
