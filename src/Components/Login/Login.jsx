@@ -4,11 +4,10 @@ import reservationImg from '../../../public/reservation_bg_2.jpg'
 import { Link, useNavigate } from 'react-router-dom'
 
 export default function Login () {
-  let naviage = useNavigate();
+ let navigate = useNavigate();
   function submit(){
-    naviage('/home')
-    
-
+    navigate('/home')
+  
   }
   return (
     <>
