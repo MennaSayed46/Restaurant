@@ -3,8 +3,14 @@ import style from './Contact.module.css';
 import img from '../../../public/breadcumb-bg.jpg';
 import { Link } from 'react-router-dom';
 import map from '../../../public/map.svg'
+import React, { useEffect } from 'react';
 
 export default function Contact () {
+  
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []);
+  
   return (
     <>
       {/* main section */}
