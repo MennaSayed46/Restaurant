@@ -23,7 +23,7 @@ export default function MainSlider () {
         const nextIndex = (currentIndex + 1) % images.length
         return images[nextIndex]
       })
-    }, 5000)
+    }, 1000)
 
     return () => clearInterval(interval)
   }, [])
